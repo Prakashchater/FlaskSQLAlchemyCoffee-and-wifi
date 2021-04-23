@@ -125,7 +125,7 @@ def update_price(id):
 @app.route("/reported-close/<int:id>", methods=["DELETE"])
 def close(id):
     api_key = request.args.get("api-key")
-    if api_key == "TopSecretAPIKey":
+    if api_key == "YOUR API KEY":
         cafe = db.session.query(Cafe).get(id)
         if cafe:
             db.session.delete(cafe)
